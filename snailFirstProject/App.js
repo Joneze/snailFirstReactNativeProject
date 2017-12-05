@@ -25,6 +25,9 @@ const instructions = Platform.select({
 
 export default class App extends Component<{}> {
   render() {
+    let pic = {
+      uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+    };
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -36,7 +39,9 @@ export default class App extends Component<{}> {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
+        <Image source={pic} style={{width: 193, height: 110}} />
       </View>
+
     );
   }
 }
